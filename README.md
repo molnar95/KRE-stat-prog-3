@@ -76,7 +76,7 @@ Suggested reading:
 * [`data.table` FAQ](https://rdatatable.gitlab.io/data.table/articles/datatable-faq.html)
 * [Database-like ops benchmark](https://h2oai.github.io/db-benchmark/)
 
-Homework:
+Optional homework:
 
 1. Load `bookings` data from http://bit.ly/CEU-R-hotels-2018-prices and the hotel `features` from http://bit.ly/CEU-R-hotels-2018-features
 2. Count the number of 4 stars hotels in Hungary
