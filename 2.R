@@ -3,7 +3,7 @@
 # # 3. Compute the average rating of 4 and 5 star hotels in Hungary and Germany
 # # 4. Round up the previously computed average rating to 2 digits
 # # 5. Do we have any bookings in unknown hotels (as per the features dataset)?
-# #   6. Clean up the bookings dataset from bookings from unknown hotels and print the number of remaining bookings
+# # 6. Clean up the bookings dataset from bookings from unknown hotels and print the number of remaining bookings
 # # 7. What's the average distance of hotels from the city central in Budapest?
 # # 8. List all neighbourhoods in Budapest
 # 9. Compute the average distance from the city center for the neighbourhoods in Budapest
@@ -12,3 +12,19 @@
 # 12. Compute the average number of nights per booking in Hungary
 
 
+#1.
+library(data.table)
+bookings <- fread( "http://bit.ly/CEU-R-hotels-2018-prices")
+features<- fread("http://bit.ly/CEU-R-hotels-2018-features")
+str(bookings)
+str(features)
+#2.
+
+features[stars>3 & country %in% c("Hungary", "Germany"),]
+#3. 
+szurt<-features[stars>3 & country %in% c("Hungary", "Germany"),]
+mean(as.vector(szurt[,stars]))
+#4.
+round(mean(as.vector(szurt[,stars])),2)
+
+     
