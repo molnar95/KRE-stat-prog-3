@@ -26,9 +26,10 @@ booking[!hotel_id %in% unique(hotels$hotel_id)] # !: negálás
 booking[hotel_id %in% unique(hotels$hotel_id)]
 
 # 7. What's the average distance of hotels from the city central in Budapest?
-
+hotels[city == 'Budapest' & center1label == 'City centre', mean(distance, na.rm = TRUE)]
 
 # 8. List all neighbourhoods in Budapest
+hotels[city == 'Budapest', unique(neighbourhood)]
 
 # 9. Compute the average distance from the city center for the neighbourhoods in Budapest
 
