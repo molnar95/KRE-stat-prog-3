@@ -37,8 +37,3 @@ round(hotels[stars == 4 | stars == 5 & country == 'Hungary' | country == 'German
 
 
 
-
-booking[1]
-booking[1:5]
-booking[offer == 0 & price < 100 & nnights == 4 & holiday == 1]
-booking[offer == 0 & price < 100 & nnights == 4 & holiday == 1][1:5]
