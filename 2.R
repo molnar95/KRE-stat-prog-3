@@ -3,6 +3,7 @@
 #############################
 
 # 1. Load `bookings` data from http://bit.ly/CEU-R-hotels-2018-prices and the hotel `features` from http://bit.ly/CEU-R-hotels-2018-features
+
 # 2. Count the number of 4 stars hotels in Hungary
 # 3. Compute the average rating of 4 and 5 star hotels in Hungary and Germany
 # 4. Round up the previously computed average rating to 2 digits
