@@ -32,11 +32,12 @@ hotels[city == 'Budapest' & center1label == 'City centre', mean(distance, na.rm 
 hotels[city == 'Budapest', unique(neighbourhood)]
 
 # 9. Compute the average distance from the city center for the neighbourhoods in Budapest
-
+hotels[city == 'Budapest', neighbourhood, main(distance, na.rm = TRUE), by=neighbourhood]
 
 # 10. Count the number of bookings in Hungary
 merged <- merge(booking, hotels, by="hotel_id")
 str(merged)
+
 
 # 11. Count the number of nights booked in Hungary
 
