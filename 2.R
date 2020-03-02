@@ -14,18 +14,19 @@ str(hotels)
 hotels[stars == 4 & country == 'Hungary', .N]
 
 # 3. Compute the average rating of 4 and 5 star hotels in Hungary and Germany
-hotels[stars == 4 | stars == 5 & country == 'Hungary' | country == 'Germany', list(avg_rate = mean(rating)), by = list(stars, country)]
-
 hotels[stars == 4 | stars == 5 & country == 'Hungary' | country == 'Germany', mean(rating, na.rm = TRUE)]
 
 # 4. Round up the previously computed average rating to 2 digits
 round(hotels[stars == 4 | stars == 5 & country == 'Hungary' | country == 'Germany', mean(rating, na.rm = TRUE)], 2)
 
 # 5. Do we have any bookings in unknown hotels (as per the features dataset)?
+booking[!hotel_id %in% unique(hotels$hotel_id)] # !: negálás
 
 # 6. Clean up the bookings dataset from bookings from unknown hotels and print the number of remaining bookings
+booking[hotel_id %in% unique(hotels$hotel_id)]
 
 # 7. What's the average distance of hotels from the city central in Budapest?
+
 
 # 8. List all neighbourhoods in Budapest
 
