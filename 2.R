@@ -22,8 +22,11 @@ hotels[stars == 4 | stars == 5 & country == 'Hungary' | country == 'Germany', me
 round(hotels[stars == 4 | stars == 5 & country == 'Hungary' | country == 'Germany', mean(rating, na.rm = TRUE)], 2)
 
 # 5. Do we have any bookings in unknown hotels (as per the features dataset)?
+booking[!hotel_id %in% unique(hotels$hotel_id)]
 
 # 6. Clean up the bookings dataset from bookings from unknown hotels and print the number of remaining bookings
+booking[hotel_id != 2]
+booking[hotel_id %in% unique(hotels$hotel_id)]
 
 # 7. What's the average distance of hotels from the city central in Budapest?
 
