@@ -28,6 +28,9 @@ features[city == "Budapest" & accommodation_type == "Hotel", mean(distance, na.r
 features[city == "Budapest" ,unique(neighbourhood)]
 
 # 9. Compute the average distance from the city center for the neighbourhoods in Budapest
+str(features)
+features[city == "Budapest", mean(distance, na.rm = T), by=neighbourhood]
+
 # 10. Count the number of bookings in Hungary
 # 11. Count the number of nights booked in Hungary
 # 12. Compute the average number of nights per booking in Hungary
