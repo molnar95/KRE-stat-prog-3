@@ -2,9 +2,12 @@
 library(data.table)
 bookings <- fread('http://bit.ly/CEU-R-hotels-2018-prices')
 str(bookings)
-features <- fread('http://bit.ly/CEU-R-hotels-2018-features')
+features <- data.table(read.csv('http://bit.ly/CEU-R-hotels-2018-features', encoding="UTF-8", stringsAsFactors = F))
 str(features)
+?fread
 # 2. Count the number of 4 stars hotels in Hungary
+nrow(features[country %in% c("Hungary") & stars == 4,])
+
 # 3. Compute the average rating of 4 and 5 star hotels in Hungary and Germany
 # 4. Round up the previously computed average rating to 2 digits
 # 5. Do we have any bookings in unknown hotels (as per the features dataset)?
