@@ -32,4 +32,17 @@ features[is.na(hotel_id), .N]
 bookings[!hotel_id %in% unique(features$hotel_id),]
 #6.
 bookings[hotel_id %in% unique(features$hotel_id),]
-     
+   
+str(features)
+#7
+features[city=="Budapest" , mean(distance)]
+#8
+unique(features[city=="Budapest" , neighbourhood])
+#9
+features[city=="Budapest" , mean(distance),  by= neighbourhood]
+
+#10
+features[country=="Hungary", .N]
+#11.
+
+
