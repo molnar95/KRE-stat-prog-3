@@ -26,5 +26,10 @@ szurt<-features[stars>3 & country %in% c("Hungary", "Germany"),]
 mean(as.vector(szurt[,stars]))
 #4.
 round(mean(as.vector(szurt[,stars])),2)
-
+#5
+bookings[is.na(hotel_id), .N]
+features[is.na(hotel_id), .N]
+bookings[!hotel_id %in% unique(features$hotel_id),]
+#6.
+bookings[hotel_id %in% unique(features$hotel_id),]
      
